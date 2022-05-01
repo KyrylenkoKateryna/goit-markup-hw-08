@@ -1,0 +1,26 @@
+// for mobile screns only
+@media screen and (max-width: 767px) {
+    .header {
+      background-color: var(--primary-bg--mode-dark);
+    }
+  }
+  
+  // for tablets screns only
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    .header {
+      background-color: var(--primary-bg--mode-dark);
+    }
+  }
+  
+  // for tablets screns and wider
+  @media screen and (min-width: 768px) {
+    .header {
+      background-color: var(--primary-bg--mode-dark);
+    }
+  }
+  // for desktop screns and wider
+  @media screen and (min-width: 1200px) {
+    .header {
+      background-color: var(--primary-bg--mode-dark);
+    }
+  }

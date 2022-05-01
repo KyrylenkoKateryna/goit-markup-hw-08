@@ -1,0 +1,50 @@
+.mobile-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    margin-left: auto;
+    cursor: pointer;
+    z-index: 99;
+    transition: fill 250ms var(--timing-function);
+
+    &:hover {
+    fill: var( --accent-color);
+        }
+    
+
+@media screen and (min-width: 768px) {
+    display: none;}
+   
+}
+
+    .mobile-btn__item{
+        width: 44px;
+        height: 44px;
+               
+    &--open{
+        opacity: 1;
+       
+    }
+    &--close{
+      opacity: 0;
+      
+    }
+}
+.mobile-btn.is-active 
+.mobile-btn__item--open{
+    opacity: 0;
+}
+.mobile-btn.is-active 
+.mobile-btn__item--close {
+    opacity: 1;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

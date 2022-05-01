@@ -1,0 +1,22 @@
+      /* кнопка */
+    
+      .hero__btn {
+    
+        display: inline-block;
+        border-radius: 4px;
+        padding: 10px 32px;
+        min-width: 200px;
+        border: 1px solid transparent;
+      
+        color:var(--accent-color-second);
+        background:var(--accent-color);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.8;
+        cursor: pointer;
+      }
+  
+  
+      .hero__btn{
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }

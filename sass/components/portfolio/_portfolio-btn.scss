@@ -1,0 +1,27 @@
+.btn-links {
+      
+    display: inline-block;
+    border-radius: 4px;
+    min-width: 75px;
+    color: var(--title-text-color);
+    background-color:var(--accent-bgc-folio);
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    border: 1px solid transparent;
+    cursor: pointer;
+    padding: 6px 22px;
+    font-weight: 500;
+    transition: color 250ms var(--timing-function),
+    background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+    }
+  
+   .portfolio__links .btn-links:hover,
+   .portfolio__links .btn-links:focus
+  {
+  color:var(--accent-color-second);
+  background-color:var(--accent-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
+  } 

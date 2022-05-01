@@ -1,0 +1,58 @@
+/* Заголовок формы */
+
+.header-form{
+    margin: 0;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--title-text-color);
+    letter-spacing: 0.03em;
+    line-height:1.15em;
+  } 
+  
+  /* ФОРМА заполнения */
+  
+  .form{
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+  }
+  
+  .header-form{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-text-color);
+    margin-bottom: 12px;
+
+    @media screen and (min-width: 480px) {
+      font-size: 20px ;
+      margin-bottom: 30px;
+  }
+  }
+  
+  .form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    
+  }
+  
+  .form-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--primary-text-color);
+    margin-right: 90%;
+   
+  }
+  
+  .form-location {
+    position: relative;
+    margin-top: 4px; 
+  }
+  

@@ -1,0 +1,46 @@
+
+    /* cпрайты для соц сетей */
+
+    
+    .team__networks{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        
+       
+      }
+      
+      .team__networks .team__things{
+        display: flex;
+        align-items: center;
+        color:var(--accent-color-networks);
+       }
+             
+       .team__messengers{
+        fill: currentColor;
+      }
+        .team__socials:not(:last-child){
+          margin-right: 10px;
+        }
+      
+        .team__socials{
+          align-items: center;
+          justify-content: center;
+        }
+       
+        .team__things {
+          justify-content: center;
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          transition: color 250ms var(--timing-function),  background-color 250ms var(--timing-function);
+      
+        }
+         
+        .team__things:hover,
+        .team__things:focus {
+        background-color: var(--accent-color);
+        color: var(--accent-color-second);
+        }
+        

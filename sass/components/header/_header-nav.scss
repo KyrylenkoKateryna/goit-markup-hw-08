@@ -1,0 +1,141 @@
+.nav{
+ display: flex; 
+  text-decoration: none;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+  
+
+
+    .nav .link{
+      
+      padding-top: 32px; 
+      padding-bottom: 32px;
+      display: block;
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+      color: var(--title-text-color);
+      transition: color 250ms var(--timing-function);
+
+    }
+  /* подчеркивание границы перехода */
+     .nav__list--current{
+    
+      padding-top: 32px; 
+      padding-bottom: 32px;
+      display: block;
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+     color:var(--accent-color-header);
+     
+     position: relative;
+     
+    }
+
+    .nav__list--current::after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      border-radius: 2px;
+      background-color: var(--accent-color);
+      transition: color 250ms var(--timing-function);
+    }
+    
+
+   .nav .nav__list{
+    
+  margin-right: 50px;
+  display: block;
+   }
+  
+   .nav .nav__list:last-child{
+    margin-right: 0;
+   }
+  
+   .nav .nav__list:not(:last-child){
+   
+    margin-right: 40px;
+   }
+  
+    .nav .link:hover,
+    .nav .link:focus
+    {  
+    
+      color: var(--accent-color);
+    }
+  
+  
+    .header__contact{
+     flex-direction: column;
+     display: flex;
+     margin-left: auto;
+
+     @media screen and (max-width: 767px) {
+      display: none;
+      
+    }
+  
+      @media screen and (min-width: 1200px){
+    flex-direction: row; 
+    align-items: center;
+ 
+      }
+    }
+  
+    .header__contact .header__item:not(:last-child){
+    margin-right: 50px;
+  
+    }
+
+
+    .header__item .header-contacts{
+     
+      display: flex;
+      align-items: center;
+      color: var(--primary-text-color); 
+      transition: color 250ms var(--timing-function);
+    }
+    
+    .header__letter,
+    .header__smartphone {
+    margin-right: 10px;
+    fill: currentColor;
+    }
+
+    /* активная ссылка при переходе на другую страницу*/
+
+    /* интерактивные ссылки емейл и номер телефона */
+
+   .header__contacts{
+  padding-top: 32px;
+  padding-bottom: 32px;
+  transition: color 250ms var(--timing-function);
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+  margin-bottom: 10px;
+  font-size: 12px;
+  margin-right:0;
+}
+
+   }
+   
+   
+  .header__contacts:hover,
+  .header__contacts:focus
+  {
+  
+  color:var(--accent-color);
+  }
+   

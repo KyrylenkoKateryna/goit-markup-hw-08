@@ -1,0 +1,38 @@
+
+.backdrop-btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    padding: 0;
+    background-color: var(--accent-color-second);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: fill 250ms var(--timing-function);
+    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  } 
+
+  .btn-submision {
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 55px;
+    min-width: 200px;
+    border: 1px solid transparent;
+    color: var(--accent-color-second);
+    background: var(--accent-color);
+    box-shadow: var(--shadow-area-portfolio-card);
+    font-size: 16px;
+    line-height: 1.8;
+    cursor: pointer;
+    margin-left: 115px;
+   
+  } 
