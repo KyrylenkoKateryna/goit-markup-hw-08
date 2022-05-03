@@ -1,5 +1,5 @@
 .btn-linker{
-margin-left: 12px;
+
   color: var(--accent-color-second);
   background-color: var(--accent-color);
   cursor: pointer;
@@ -13,5 +13,14 @@ margin-left: 12px;
   font-family: inherit;
   padding: 10px 28px;
   position: relative;
-  display: flex;
+  
+  @media screen and (max-width: 1199px) {
+  display: inline-flex;
   } 
+
+
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    margin: 0;
+  }
+}
