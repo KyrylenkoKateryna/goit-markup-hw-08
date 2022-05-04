@@ -62,27 +62,33 @@ p {
   margin: 0;
 }
 
-h1 {
+h1,
+h2 {
   margin: 0;
 }
 
 .container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 0px 15px;
+  margin: 0 auto;
+  width: 100%;
+  outline: 2px solid red;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    max-width: 1200px;
+    width: 1200px;
   }
 }
 
@@ -851,38 +857,28 @@ h1 {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .advantages__list {
-    display: flex;
-    flex-wrap: wrap;
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc( -1 * var(--card-border-item));
+  margin-left: calc( -1 * var(--card-border-item));
+}
+
+.advantages__list > .advantages__item {
+  flex-basis: calc(100% / 4 - var(--card-border-item));
+  margin-top: var(--card-border-item);
+  margin-left: var(--card-border-item);
+}
+
+@media screen and (max-width: 767px) {
+  .advantages__list > .advantages__item {
+    flex-basis: calc(100% / 1 - var(--card-border-item));
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .advantages__list {
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .advantages__list .advantages__item + .advantages__item {
-    margin-left: 30px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .advantages__item {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 1199px) {
-  .advantages__item {
-    width: calc((100% / 2 - 2 * 15px));
-    margin-right: 30px;
-    margin-bottom: 30px;
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .advantages__list > .advantages__item {
+    flex-basis: calc(100% / 2 - var(--card-border-item));
   }
 }
 
@@ -906,7 +902,7 @@ h1 {
   padding-top: 30px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 756px) {
   .advantages__tools {
     font-size: 14px;
     text-align: center;
@@ -1004,38 +1000,28 @@ h1 {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .team__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .team__list {
-    display: flex;
-  }
-}
-
-.team__set {
+.team__list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-top: -30px;
+  margin-top: calc( -1 * var(--card-border-item));
+  margin-left: calc( -1 * var(--card-border-item));
 }
 
-.team__set .team__items {
-  flex-basis: calc(100% / 4 - 30px);
-  margin-top: 30px;
-  margin-right: 30px;
+.team__list > .team__items {
+  flex-basis: calc(100% / 4 - var(--card-border-item));
+  margin-top: var(--card-border-item);
+  margin-left: var(--card-border-item);
+}
+
+@media screen and (max-width: 767px) {
+  .team__list > .team__items {
+    flex-basis: calc(100% / 1 - var(--card-border-item));
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .team__set .team__items {
-    flex-basis: calc(100% / 2 - 30px);
-    margin-top: 30px;
-    margin-right: 30px;
+  .team__list > .team__items {
+    flex-basis: calc(100% / 2 - var(--card-border-item));
   }
 }
 
@@ -1145,41 +1131,29 @@ h1 {
   }
 }
 
-.coloboration__set {
+.coloboration__list {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -30px;
-  margin-top: -30px;
+  margin-top: calc( -1 * var(--card-border-item));
+  margin-left: calc( -1 * var(--card-border-item));
 }
 
-.coloboration__set .coloboration__peer {
-  flex-basis: calc(100% / 6 - 30px);
-  margin-top: 30px;
-  margin-right: 30px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .coloboration__set .coloboration__peer {
-    margin-top: 30px;
-    margin-right: 30px;
-  }
+.coloboration__list > .coloboration__peer {
+  flex-basis: calc(100% / 6- var(--card-border-item));
+  margin-top: var(--card-border-item);
+  margin-left: var(--card-border-item);
 }
 
 @media screen and (max-width: 767px) {
-  .coloboration__set .coloboration__peer {
-    flex-basis: calc(100% / 2 - 30px);
-    margin-top: 30px;
-    margin-right: 30px;
+  .coloboration__list > .coloboration__peer {
+    flex-basis: calc(100% / 2 - var(--card-border-item));
   }
 }
 
-.coloboration__list {
-  display: flex;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .coloboration__list > .coloboration__peer {
+    flex-basis: calc(100% / 3 - var(--card-border-item));
+  }
 }
 
 .coloboration__description {
@@ -1197,12 +1171,6 @@ h1 {
   margin-bottom: 30px;
 }
 
-@media screen and (min-width: 1200px) {
-  .coloboration__description {
-    margin-bottom: 50px;
-  }
-}
-
 .coloboration__partnership {
   fill: currentColor;
 }
@@ -1211,18 +1179,11 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 170px;
   height: 92px;
   border: 1px solid var(--accent-color-networks);
   border-radius: 4px;
   color: var(--accent-color-networks);
   transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-  .coloboration__partners {
-    width: 226px;
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1253,7 +1214,7 @@ h1 {
   .footer__container {
     flex-direction: column;
     text-align: center;
-    align-items: baseline;
+    justify-content: space-around;
   }
 }
 
@@ -1265,7 +1226,6 @@ h1 {
 @media screen and (min-width: 768px) {
   .footer__link {
     display: flex;
-    align-items: baseline;
   }
 }
 
@@ -1284,6 +1244,14 @@ h1 {
 @media screen and (min-width: 1200px) {
   .footer__link .footer__wrapper {
     margin-right: 70px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__link {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
   }
 }
 
@@ -1331,7 +1299,6 @@ h1 {
 @media screen and (min-width: 1200px) {
   .footer__networks {
     margin-right: 93px;
-    margin-bottom: 60px;
   }
 }
 
@@ -1381,19 +1348,12 @@ h1 {
 }
 
 /* Подписка с самолетиком */
-.footer__subscribe {
-  align-items: center;
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .footer__wrapper {
   display: inline-block;
 }
 
 .subscribe-form-input {
-  width: 290px;
+  width: 340px;
   margin-bottom: 20px;
   padding: 15px 16px;
   color: rgba(255, 255, 255, 0.6);
@@ -1428,7 +1388,7 @@ h1 {
   line-height: 1.88;
   letter-spacing: 0.06em;
   font-family: inherit;
-  padding: 10px 28px;
+  padding: 7px 28px;
   position: relative;
 }
 
@@ -1441,7 +1401,8 @@ h1 {
 @media screen and (max-width: 1200px) {
   .btn-linker {
     display: flex;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

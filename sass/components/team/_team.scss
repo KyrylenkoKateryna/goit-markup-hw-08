@@ -15,41 +15,26 @@
     } 
     
     .team__list {
-      @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 30px;
-
-    }
-
-
-    @media screen and (min-width: 1200px) {
-        display: flex;
-    }
-  }
-
-  .team__set{
-
-    display: flex;
+      display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
-    margin-top: -30px;
+    margin-top:calc( -1 * var(--card-border-item));
+   margin-left:calc( -1 * var(--card-border-item));
   }
  
       
-.team__set .team__items{
- 
-  flex-basis: calc(100% / 4 - 30px);
-  margin-top: 30px;
-  margin-right: 30px;
+.team__list >.team__items{ flex-basis: calc(100% / 4 - var(--card-border-item));
+  margin-top: var(--card-border-item);
+  margin-left: var(--card-border-item);
 
-  @media screen and (min-width: 768px) and (max-width: 1200px){
-    flex-basis: calc(100% / 2 - 30px);
-  margin-top: 30px;
-  margin-right: 30px;
+  @media screen and (max-width: 767px) {
+    flex-basis: calc(100% / 1 - var(--card-border-item));
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    flex-basis: calc(100% / 2 - var(--card-border-item));
+  }
 }
+
       
   
       .team__description{

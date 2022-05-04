@@ -12,38 +12,28 @@
 }
 
 
-  .coloboration__set{
-display: flex;
-flex-wrap: wrap;
-margin-right: -30px;
-margin-top: -30px;
-}
-
-.coloboration__set .coloboration__peer{
-  flex-basis: calc(100% / 6 - 30px);
-  margin-top: 30px;
-margin-right: 30px;
-
-  @media screen and (min-width: 768px) and (max-width: 1200px){
-    margin-top: 30px;
-    margin-right: 30px;
-  }
-
-  @media screen and (max-width: 767px) {
-    flex-basis: calc(100% / 2 - 30px);
-    margin-top: 30px;
-    margin-right: 30px;
-  }
-
-}
    .coloboration__list{
-    display:flex;
-    align-items: center;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    margin-top:calc( -1 * var(--card-border-item));
+    margin-left:calc( -1 * var(--card-border-item));
+  }
+
+  .coloboration__list >.coloboration__peer{
+    flex-basis: calc(100% / 6- var(--card-border-item));
+    margin-top: var(--card-border-item);
+    margin-left: var(--card-border-item);
+
+    @media screen and (max-width: 767px) {
+      
+      flex-basis: calc(100% / 2 - var(--card-border-item));
     }
+
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+      flex-basis: calc(100% / 3 - var(--card-border-item));
+    }
+  }
+  
   
    .coloboration__description{
       margin-top: 0;
@@ -58,10 +48,7 @@ margin-right: 30px;
       font-size: 36px;
       line-height: 1.1;
       margin-bottom: 30px;
-
-      @include mq(desktop){
-          margin-bottom: 50px;
-      }
+      
     } 
   
   .coloboration__partnership{
@@ -74,22 +61,15 @@ margin-right: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
     height: 92px;
     border: 1px solid var(--accent-color-networks);
     border-radius: 4px;
     color:var(--accent-color-networks);
     transition: color 250ms var(--timing-function), border 250ms var(--timing-function);
-    @media screen and (min-width: 768px) and (max-width: 1200px){
-      width: 226px;
-    }
-
-    @media screen and (min-width: 1200px){
-      width: 170px;
-    }
+    @media screen and (min-width: 1200px) {
+    width:170px;
   }
-  
-
+    }
   
   .coloboration__partners:hover,
   .coloboration__partners:focus {
@@ -97,6 +77,4 @@ margin-right: 30px;
     background-color: var(--accent-color-second);
     color: var(--accent-color);
   }
-
-
 
